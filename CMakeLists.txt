@@ -1,12 +1,11 @@
-
 cmake_minimum_required(VERSION 3.7)
-
-project(nichijou_advanced)
-
+project(nichijou_advanced VERSION 0.1)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
+set(CMAKE_CXX_STANDARD 14)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 find_package(SDL2 REQUIRED)
 include_directories(${SDL2_INCLUDE_DIRS})
 include_directories(./include/)
-
 add_executable(nichijou_advanced ./src/main.cpp)
 target_link_libraries(nichijou_advanced ${SDL2_LIBRARIES})
 
